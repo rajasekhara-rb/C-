@@ -489,17 +489,288 @@ using namespace std;
 //}
 
 
-int main(){
-	string food = "Pizza";
-	string* ptr = &food;
-	
-	cout << "Value of var food       = " << food  <<"\n";
-	cout << "Value of ptr            = " << ptr   <<"\n";
-	cout << "Dereferenceing          = " << *ptr  <<"\n";
-//	changing the value from its menory locaion itself 
-*ptr = "Burger";
-cout << "Value of food after change  = "<< food;
-}
+//int main(){
+//	string food = "Pizza";
+//	string* ptr = &food;
+//	
+//	cout << "Value of var food       = " << food  <<"\n";
+//	cout << "Value of ptr            = " << ptr   <<"\n";
+//	cout << "Dereferenceing          = " << *ptr  <<"\n";
+////	changing the value from its menory locaion itself 
+//*ptr = "Burger";
+//cout << "Value of food after change  = "<< food;
+//}
+
+
+
+//Functons
+
+//creating two void functons and running them in main function 
+
+//void myVoidFunc1(){
+//	cout << "Running Void function 1 \n";
+//};
+//
+//void myVoidFunc2(){
+//	cout << "Running void function 2 \n";
+//}
+//
+//int main(){
+//	myVoidFunc1();
+//	myVoidFunc2();
+//	return 0;
+//}
+
+//create a function to log attendance form api response 
+
+//void attendanceLog(string name, string val){
+//	cout << name <<"________"<<val<<"\n";
+//}
+//
+//int main(){
+////	sample api resp
+//	string xName = "Reddy";
+//	string xVal = "P";
+//	
+//	string yName = "Shivam";
+//	string yVal = "A";
+//	
+//	attendanceLog(xName, xVal);
+//	attendanceLog(yName, yVal);
+//		
+//	return 0;
+//}
+
+
+
+//Create a program to take input salary from user , if salary > 100000 offer 2.5 Lakh loan
+//													 if Salary > 50000  offer 1.5 lakh loan
+//													 if Salary > 25000  offer 0.75 lakh loan
+//													 if Salary > 15000  offer 0.25 lakh loan
+//													 if Salary < 15000  offer No loan
+// Logic : Take input from user in main block and write a function to return result
+
+//void offerLoan(int salary){
+//	int offeredLoan;
+//	if(salary>100000){
+//		offeredLoan = 250000;
+//	}else if(salary<100000 && salary>50000){
+//		offeredLoan = 150000;
+//	}else if(salary <50000 && salary >25000){
+//		offeredLoan = 75000;
+//	}else if(salary < 25000 && salary > 15000){
+//		offeredLoan = 25000;
+//	}else{
+//		offeredLoan = 15000;
+//	}
+//	
+//	cout << "Offered Loan = "<<offeredLoan<<"\n";
+//}
+//
+//int main(){
+//	int salary;
+//	cout << "Enter your salary   = ";
+//	cin >> salary;
+//	
+//	offerLoan(salary);
+//	
+//	return 0;
+//}
+
+
+//Default value 
+
+//void checkCountry(string c="India"){
+//	cout << c<<"\n";
+//}
+//
+//int main(){
+//	checkCountry("USA");
+//	checkCountry("XYZ");
+//	checkCountry();
+//	checkCountry("Nepal");
+//}
+
+
+//Return usage 
+//string countryCheck(string country){
+//	if(country == "India"){
+//		return "No visa required";
+//	};
+//	return "Visa Required";
+//}
+//
+//int main(){
+//	string val1 = countryCheck("India");
+//	string val2 = countryCheck("USA");
+//
+//	cout << val1<<"\n";
+//	cout << val2<<"\n";
+//	return 0;
+//}
+
+
+//Create a calculator for + - / * by creating a function which takes 2 numbers (int) and 3rd argument as operator
+
+//void calculator(int a, int b, int c){
+//	switch(c){
+//		case 1:
+//			cout << "Sum is         = "<<a+b;
+//			break;
+//		case 2:
+//			cout << "Substration is = "<< a-b;
+//			break;
+//		case 3:
+//			cout << "Divisition is  = "<< a/b;
+//			break;
+//		case 4:
+//			cout << "Multiplication is = "<< a*b;
+//	}
+//}
+//
+//int main(){
+//	int x,y,z;
+//	
+//	cout<<"x = ";
+//	cin>>x;
+//	cout << "y = ";
+//	cin>> y;
+//	
+//	cout<<"Operation Select 1 for additon, 2 for sub, 3 for division, 4 for multiply = ";
+//	cin>>z;
+//	
+//	calculator(x, y, z);
+//}
+ 
+ 
+ 
+ 
+ // Pass an array to a function to iterate over it (pass array containing 5 integers)
+//void sampleFunc(int sampleArr[5]){
+//	for(int i; i<5; i++){
+//		cout << sampleArr[i]<<"\n";
+//	}
+//}
+//
+//int main(){
+//	int arr[5] = {1,2,3,4,5};
+//	sampleFunc(arr);
+//	return 0;
+//}
+
+//swap numbers 
+
+//void swapNums(int &x, int &y){
+//	int z = x;
+//	x=y;
+//	y=x;
+//}
+//
+//int main(){
+//	int num1 = 20;
+//	int num2 = 90;
+//	
+//	cout <<"Before swapping value of num1 = "<<num1<<" & value of num2 = "<<num2<<"\n";
+//	swapNums(num1, num2);
+//	cout << "After swapping value of num1 = "<<num1<<" & value of num2 = "<<num2<<"\n";
+////retrun 0;
+//}
+
+
+//function overloading 
+
+//int adder(int a, int b){
+//	return a+b;
+//}
+//
+//double adder(double a, double b){
+//	return a+b;
+//}
+//
+//int main(){
+//	cout<<"Adding 2, 4 using adder = "<<adder(2,4)<<"\n";
+//	cout<< "Adding 2.4, 5.5 using adder = "<< adder(2.4, 5.5)<<"\n";
+//	return 0;
+//}
+
+
+//create a function to add and subtract floats and integers using funtion overloading
+
+//int sub(int a, int b){
+//	return a-b;
+//}
+//
+//double sub(double a, double b){
+//	return a-b;
+//}
+//
+//int main(){
+//	cout<<"Sub 2, 4 using adder = "<<sub(2, 4)<<"\n";
+//	cout<< "sub 2.4, 5.5 using adder = "<< sub(2.4, 5.5)<<"\n";
+//	return 0;
+//}
+
+
+//Recustion 
+
+//int sum(int x){
+//	if(x>0){
+//		return x + sum(x-1);
+//	}else{
+//		return 0; 
+//	}
+//}
+//
+//int main(){
+//	int result = sum(10);
+//	cout << result;
+//}
+
+
+// Create a funciton to find factorial of 10! = 10x9x8x7x6x5x4x3x2x1 = 3628800
+
+//int factorial(int x){
+//	if(x == 0 || x == 1){
+//		return 1;
+//	}else{
+//		return x * factorial(x - 1);
+//	}
+//}
+//
+//
+//int main(){
+//	int x;
+//	cout << "Enter a number to get Factorial of = ";
+//	cin >> x;
+//	int result = factorial(x);
+//	cout << result;
+//	return 0;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
